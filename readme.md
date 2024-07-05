@@ -15,7 +15,7 @@ npm install boxen
 ```js
 import boxen from 'boxen';
 
-console.log(boxen('unicorn', {padding: 1}));
+console.log(boxen('unicorn', { padding: 1 }));
 /*
 ┌─────────────┐
 │             │
@@ -24,7 +24,7 @@ console.log(boxen('unicorn', {padding: 1}));
 └─────────────┘
 */
 
-console.log(boxen('unicorn', {padding: 1, margin: 1, borderStyle: 'double'}));
+console.log(boxen('unicorn', { padding: 1, margin: 1, borderStyle: 'double' }));
 /*
 
    ╔═════════════╗
@@ -35,7 +35,7 @@ console.log(boxen('unicorn', {padding: 1, margin: 1, borderStyle: 'double'}));
 
 */
 
-console.log(boxen('unicorns love rainbows', {title: 'magical', titleAlignment: 'center'}));
+console.log(boxen('unicorns love rainbows', { title: 'magical', titleAlignment: 'center' }));
 /*
 ┌────── magical ───────┐
 │unicorns love rainbows│
@@ -60,7 +60,8 @@ Type: `object`
 ##### borderColor
 
 Type: `string`\
-Values: `'black'` `'red'` `'green'` `'yellow'` `'blue'` `'magenta'` `'cyan'` `'white'` `'gray'` or a hex value like `'#ff0000'`
+Values: `'black'` `'red'` `'green'` `'yellow'` `'blue'` `'magenta'` `'cyan'` `'white'` `'gray'` or a
+hex value like `'#ff0000'`
 
 Color of the box border.
 
@@ -69,55 +70,73 @@ Color of the box border.
 Type: `string | object`\
 Default: `'single'`\
 Values:
+
 - `'single'`
+
 ```
 ┌───┐
 │foo│
 └───┘
 ```
+
 - `'double'`
+
 ```
 ╔═══╗
 ║foo║
 ╚═══╝
 ```
+
 - `'round'` (`'single'` sides with round corners)
+
 ```
 ╭───╮
 │foo│
 ╰───╯
 ```
+
 - `'bold'`
+
 ```
 ┏━━━┓
 ┃foo┃
 ┗━━━┛
 ```
+
 - `'singleDouble'` (`'single'` on top and bottom, `'double'` on right and left)
+
 ```
 ╓───╖
 ║foo║
 ╙───╜
 ```
+
 - `'doubleSingle'` (`'double'` on top and bottom, `'single'` on right and left)
+
 ```
 ╒═══╕
 │foo│
 ╘═══╛
 ```
+
 - `'classic'`
+
 ```
 +---+
 |foo|
 +---+
 ```
+
 - `'arrow'`
+
 ```
 ↘↓↓↓↙
 →foo←
 ↗↑↑↑↖
 ```
+
 - `'none'`
+
 ```
 foo
 ```
@@ -150,12 +169,12 @@ Reduce opacity of the border.
 
 Type: `string`
 
-Display a title at the top of the box.
-If needed, the box will horizontally expand to fit the title.
+Display a title at the top of the box. If needed, the box will horizontally expand to fit the title.
 
 Example:
+
 ```js
-console.log(boxen('foo bar', {title: 'example'}));
+console.log(boxen('foo bar', { title: 'example' }));
 /*
 ┌ example ┐
 │foo bar  │
@@ -171,7 +190,9 @@ Default: `'left'`
 Align the title in the top bar.
 
 Values:
+
 - `'left'`
+
 ```js
 /*
 ┌ example ──────┐
@@ -179,7 +200,9 @@ Values:
 └───────────────┘
 */
 ```
+
 - `'center'`
+
 ```js
 /*
 ┌─── example ───┐
@@ -187,7 +210,9 @@ Values:
 └───────────────┘
 */
 ```
+
 - `'right'`
+
 ```js
 /*
 ┌────── example ┐
@@ -202,12 +227,13 @@ Type: `number`
 
 Set a fixed width for the box.
 
-*Note:* This disables terminal overflow handling and may cause the box to look broken if the user's terminal is not wide enough.
+_Note:_ This disables terminal overflow handling and may cause the box to look broken if the user's
+terminal is not wide enough.
 
 ```js
 import boxen from 'boxen';
 
-console.log(boxen('foo bar', {width: 15}));
+console.log(boxen('foo bar', { width: 15 }));
 // ┌─────────────┐
 // │foo bar      │
 // └─────────────┘
@@ -219,12 +245,12 @@ Type: `number`
 
 Set a fixed height for the box.
 
-*Note:* This option will crop overflowing content.
+_Note:_ This option will crop overflowing content.
 
 ```js
 import boxen from 'boxen';
 
-console.log(boxen('foo bar', {height: 5}));
+console.log(boxen('foo bar', { height: 5 }));
 // ┌───────┐
 // │foo bar│
 // │       │
@@ -243,9 +269,11 @@ Pass a callback function to control box dimensions:
 ```js
 import boxen from 'boxen';
 
-console.log(boxen('foo bar', {
-	fullscreen: (width, height) => [width, height - 1],
-}));
+console.log(
+  boxen('foo bar', {
+    fullscreen: (width, height) => [width, height - 1],
+  })
+);
 ```
 
 ##### padding
@@ -255,7 +283,8 @@ Default: `0`
 
 Space between the text and box border.
 
-Accepts a number or an object with any of the `top`, `right`, `bottom`, `left` properties. When a number is specified, the left/right padding is 3 times the top/bottom to make it look nice.
+Accepts a number or an object with any of the `top`, `right`, `bottom`, `left` properties. When a
+number is specified, the left/right padding is 3 times the top/bottom to make it look nice.
 
 ##### margin
 
@@ -264,7 +293,8 @@ Default: `0`
 
 Space around the box.
 
-Accepts a number or an object with any of the `top`, `right`, `bottom`, `left` properties. When a number is specified, the left/right margin is 3 times the top/bottom to make it look nice.
+Accepts a number or an object with any of the `top`, `right`, `bottom`, `left` properties. When a
+number is specified, the left/right margin is 3 times the top/bottom to make it look nice.
 
 ##### float
 
@@ -277,7 +307,8 @@ Float the box on the available terminal screen space.
 ##### backgroundColor
 
 Type: `string`\
-Values: `'black'` `'red'` `'green'` `'yellow'` `'blue'` `'magenta'` `'cyan'` `'white'` `'gray'` or a hex value like `'#ff0000'`
+Values: `'black'` `'red'` `'green'` `'yellow'` `'blue'` `'magenta'` `'cyan'` `'white'` `'gray'` or a
+hex value like `'#ff0000'`
 
 Color of the background.
 

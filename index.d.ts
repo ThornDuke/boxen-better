@@ -1,11 +1,11 @@
-import {type LiteralUnion} from 'type-fest';
-import {type BoxStyle, type Boxes as CLIBoxes} from 'cli-boxes';
+import { type LiteralUnion } from 'type-fest';
+import { type BoxStyle, type Boxes as CLIBoxes } from 'cli-boxes';
 
 /**
 All box styles.
 */
 type Boxes = {
-	readonly none: BoxStyle;
+  readonly none: BoxStyle;
 } & CLIBoxes;
 
 /**
@@ -30,127 +30,127 @@ const border: CustomBorderStyle = {
 ```
 */
 export type CustomBorderStyle = {
-	/**
+  /**
 	@deprecated Use `top` and `bottom` instead.
 	*/
-	horizontal?: string;
+  horizontal?: string;
 
-	/**
+  /**
 	@deprecated Use `left` and `right` instead.
 	*/
-	vertical?: string;
+  vertical?: string;
 } & BoxStyle;
 
 /**
 Spacing used for `padding` and `margin`.
 */
 export type Spacing = {
-	readonly top?: number;
-	readonly right?: number;
-	readonly bottom?: number;
-	readonly left?: number;
+  readonly top?: number;
+  readonly right?: number;
+  readonly bottom?: number;
+  readonly left?: number;
 };
 
 export type Options = {
-	/**
+  /**
 	Color of the box border.
 	*/
-	readonly borderColor?: LiteralUnion<
-	| 'black'
-	| 'red'
-	| 'green'
-	| 'yellow'
-	| 'blue'
-	| 'magenta'
-	| 'cyan'
-	| 'white'
-	| 'gray'
-	| 'grey'
-	| 'blackBright'
-	| 'redBright'
-	| 'greenBright'
-	| 'yellowBright'
-	| 'blueBright'
-	| 'magentaBright'
-	| 'cyanBright'
-	| 'whiteBright',
-	string
-	>;
+  readonly borderColor?: LiteralUnion<
+    | 'black'
+    | 'red'
+    | 'green'
+    | 'yellow'
+    | 'blue'
+    | 'magenta'
+    | 'cyan'
+    | 'white'
+    | 'gray'
+    | 'grey'
+    | 'blackBright'
+    | 'redBright'
+    | 'greenBright'
+    | 'yellowBright'
+    | 'blueBright'
+    | 'magentaBright'
+    | 'cyanBright'
+    | 'whiteBright',
+    string
+  >;
 
-	/**
+  /**
 	Style of the box border.
 
 	@default 'single'
 	*/
-	readonly borderStyle?: keyof Boxes | CustomBorderStyle;
+  readonly borderStyle?: keyof Boxes | CustomBorderStyle;
 
-	/**
+  /**
 	Reduce opacity of the border.
 
 	@default false
 	*/
-	readonly dimBorder?: boolean;
+  readonly dimBorder?: boolean;
 
-	/**
+  /**
 	Space between the text and box border.
 
 	@default 0
 	*/
-	readonly padding?: number | Spacing;
+  readonly padding?: number | Spacing;
 
-	/**
+  /**
 	Space around the box.
 
 	@default 0
 	*/
-	readonly margin?: number | Spacing;
+  readonly margin?: number | Spacing;
 
-	/**
+  /**
 	Float the box on the available terminal screen space.
 
 	@default 'left'
 	*/
-	readonly float?: 'left' | 'right' | 'center';
+  readonly float?: 'left' | 'right' | 'center';
 
-	/**
+  /**
 	Color of the background.
 	*/
-	readonly backgroundColor?: LiteralUnion<
-	| 'black'
-	| 'red'
-	| 'green'
-	| 'yellow'
-	| 'blue'
-	| 'magenta'
-	| 'cyan'
-	| 'white'
-	| 'blackBright'
-	| 'redBright'
-	| 'greenBright'
-	| 'yellowBright'
-	| 'blueBright'
-	| 'magentaBright'
-	| 'cyanBright'
-	| 'whiteBright',
-	string
-	>;
+  readonly backgroundColor?: LiteralUnion<
+    | 'black'
+    | 'red'
+    | 'green'
+    | 'yellow'
+    | 'blue'
+    | 'magenta'
+    | 'cyan'
+    | 'white'
+    | 'blackBright'
+    | 'redBright'
+    | 'greenBright'
+    | 'yellowBright'
+    | 'blueBright'
+    | 'magentaBright'
+    | 'cyanBright'
+    | 'whiteBright',
+    string
+  >;
 
-	/**
+  /**
 	Align the text in the box based on the widest line.
 
 	@default 'left'
 	@deprecated Use `textAlignment` instead.
 	*/
-	readonly align?: 'left' | 'right' | 'center';
+  readonly align?: 'left' | 'right' | 'center';
 
-	/**
+  /**
 	Align the text in the box based on the widest line.
 
 	@default 'left'
 	*/
-	readonly textAlignment?: 'left' | 'right' | 'center';
+  readonly textAlignment?: 'left' | 'right' | 'center';
 
-	/**
+  /**
 	Display a title at the top of the box.
 	If needed, the box will horizontally expand to fit the title.
 
@@ -162,9 +162,9 @@ export type Options = {
 	// └─────────┘
 	```
 	*/
-	readonly title?: string;
+  readonly title?: string;
 
-	/**
+  /**
 	Align the title in the top bar.
 
 	@default 'left'
@@ -182,9 +182,9 @@ export type Options = {
 	// └───────────────┘
 	```
 	*/
-	readonly titleAlignment?: 'left' | 'right' | 'center';
+  readonly titleAlignment?: 'left' | 'right' | 'center';
 
-	/**
+  /**
 	Set a fixed width for the box.
 
 	__Note__: This disables terminal overflow handling and may cause the box to look broken if the user's terminal is not wide enough.
@@ -199,9 +199,9 @@ export type Options = {
 	// └─────────────┘
 	```
 	*/
-	readonly width?: number;
+  readonly width?: number;
 
-	/**
+  /**
 	Set a fixed height for the box.
 
 	__Note__: This option will crop overflowing content.
@@ -218,9 +218,9 @@ export type Options = {
 	// └───────┘
 	```
 	*/
-	readonly height?: number;
+  readonly height?: number;
 
-	/**
+  /**
 	__boolean__: Whether or not to fit all available space within the terminal.
 
 	__function__: Pass a callback function to control box dimensions.
@@ -234,7 +234,9 @@ export type Options = {
 	}));
 	```
 	*/
-	readonly fullscreen?: boolean | ((width: number, height: number) => [width: number, height: number]);
+  readonly fullscreen?:
+    | boolean
+    | ((width: number, height: number) => [width: number, height: number]);
 };
 
 /**
