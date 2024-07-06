@@ -5,7 +5,8 @@
 ![](screenshot.png)
 
 This library is a fork of [`Boxen`](https://www.npmjs.com/package/boxen) by Sindre Sorhus. It's
-identical in terms of functionality, but it has an additional option: `borderBackgroundColor`.
+identical in terms of functionality, but it has an additional option:
+[`borderBackgroundColor`](#borderbackgroundcolor).
 
 ## Install
 
@@ -167,7 +168,7 @@ Type: `string`\
 Values: `'black'` `'red'` `'green'` `'yellow'` `'blue'` `'magenta'` `'cyan'` `'white'` `'gray'` or a
 hex value like `'#ff0000'`
 
-Color of the background of the border.
+Color of the of the border background.
 
 ##### dimBorder
 
