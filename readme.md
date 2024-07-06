@@ -1,21 +1,24 @@
-# boxen
+# boxen-better
 
-> Create boxes in the terminal
+> Create wonderful boxes in the terminal
 
 ![](screenshot.png)
+
+This library is a fork of [`Boxen`](https://www.npmjs.com/package/boxen) by Sindre Sorhus. It's
+identical in terms of functionality, but it has an additional option: `borderBackgroundColor`.
 
 ## Install
 
 ```sh
-npm install boxen
+npm install boxen-better
 ```
 
 ## Usage
 
 ```js
-import boxen from 'boxen';
+import boxenb from 'boxen-better';
 
-console.log(boxen('better', { padding: 1 }));
+console.log(boxenb('better', { padding: 1 }));
 /*
 ┌─────────────┐
 │             │
@@ -24,7 +27,7 @@ console.log(boxen('better', { padding: 1 }));
 └─────────────┘
 */
 
-console.log(boxen('better', { padding: 1, margin: 1, borderStyle: 'double' }));
+console.log(boxenb('better', { padding: 1, margin: 1, borderStyle: 'double' }));
 /*
 
    ╔═════════════╗
@@ -35,7 +38,7 @@ console.log(boxen('better', { padding: 1, margin: 1, borderStyle: 'double' }));
 
 */
 
-console.log(boxen('better is preferable', { title: 'magical', titleAlignment: 'center' }));
+console.log(boxenb('better is preferable', { title: 'magical', titleAlignment: 'center' }));
 /*
 ┌───── magical ──────┐
 │better is preferable│
@@ -45,7 +48,7 @@ console.log(boxen('better is preferable', { title: 'magical', titleAlignment: 'c
 
 ## API
 
-### boxen(text, options?)
+### boxenb(text, options?)
 
 #### text
 
@@ -158,6 +161,14 @@ Can be any of the above predefined styles or an object with the following keys:
 }
 ```
 
+##### borderBackgroundColor
+
+Type: `string`\
+Values: `'black'` `'red'` `'green'` `'yellow'` `'blue'` `'magenta'` `'cyan'` `'white'` `'gray'` or a
+hex value like `'#ff0000'`
+
+Color of the background of the border.
+
 ##### dimBorder
 
 Type: `boolean`\
@@ -174,7 +185,7 @@ Display a title at the top of the box. If needed, the box will horizontally expa
 Example:
 
 ```js
-console.log(boxen('foo bar', { title: 'example' }));
+console.log(boxenb('foo bar', { title: 'example' }));
 /*
 ┌ example ┐
 │foo bar  │
@@ -231,9 +242,9 @@ _Note:_ This disables terminal overflow handling and may cause the box to look b
 terminal is not wide enough.
 
 ```js
-import boxen from 'boxen';
+import boxenb from 'boxen-better';
 
-console.log(boxen('foo bar', { width: 15 }));
+console.log(boxenb('foo bar', { width: 15 }));
 // ┌─────────────┐
 // │foo bar      │
 // └─────────────┘
@@ -248,9 +259,9 @@ Set a fixed height for the box.
 _Note:_ This option will crop overflowing content.
 
 ```js
-import boxen from 'boxen';
+import boxenb from 'boxen-better';
 
-console.log(boxen('foo bar', { height: 5 }));
+console.log(boxenb('foo bar', { height: 5 }));
 // ┌───────┐
 // │foo bar│
 // │       │
@@ -267,10 +278,10 @@ Whether or not to fit all available space within the terminal.
 Pass a callback function to control box dimensions:
 
 ```js
-import boxen from 'boxen';
+import boxenb from 'boxen-better';
 
 console.log(
-  boxen('foo bar', {
+  boxenb('foo bar', {
     fullscreen: (width, height) => [width, height - 1],
   })
 );
@@ -322,10 +333,4 @@ Align the text in the box based on the widest line.
 
 ## Maintainer
 
-- [Sindre Sorhus](https://github.com/sindresorhus)
-- [Caesarovich](https://github.com/Caesarovich)
-
-## Related
-
-- [boxen-cli](https://github.com/sindresorhus/boxen-cli) - CLI for this module
-- [cli-boxes](https://github.com/sindresorhus/cli-boxes) - Boxes for use in the terminal
+- [Thorn Duke](https://github.com/ThornDuke)
