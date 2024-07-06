@@ -1,16 +1,30 @@
 {
   "name": "boxen-better",
-  "version": "1.00.0",
+  "version": "1.0.0",
+  "author": "Thorn Duke",
   "description": "Create boxes in the terminal",
   "license": "MIT",
-  "repository": "sindresorhus/boxen",
-  "funding": "https://github.com/sponsors/sindresorhus",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "https://sindresorhus.com"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThornDuke/boxen-better.git"
+  },
+  "homepage": "https://github.com/ThornDuke/boxen-better/#readme",
+  "bugs": {
+    "url": "https://github.com/ThornDuke/boxen-better/issues"
   },
   "type": "module",
+  "keywords": [
+    "cli",
+    "box",
+    "boxes",
+    "terminal",
+    "term",
+    "console",
+    "ascii",
+    "unicode",
+    "border",
+    "text"
+  ],
   "exports": "./index.js",
   "engines": {
     "node": ">=14.16"
@@ -24,18 +38,6 @@
   "files": [
     "index.js",
     "index.d.ts"
-  ],
-  "keywords": [
-    "cli",
-    "box",
-    "boxes",
-    "terminal",
-    "term",
-    "console",
-    "ascii",
-    "unicode",
-    "border",
-    "text"
   ],
   "dependencies": {
     "ansi-align": "^3.0.1",
