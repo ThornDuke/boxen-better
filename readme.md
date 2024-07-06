@@ -15,31 +15,31 @@ npm install boxen
 ```js
 import boxen from 'boxen';
 
-console.log(boxen('unicorn', { padding: 1 }));
+console.log(boxen('better', { padding: 1 }));
 /*
 ┌─────────────┐
 │             │
-│   unicorn   │
+│   better    │
 │             │
 └─────────────┘
 */
 
-console.log(boxen('unicorn', { padding: 1, margin: 1, borderStyle: 'double' }));
+console.log(boxen('better', { padding: 1, margin: 1, borderStyle: 'double' }));
 /*
 
    ╔═════════════╗
    ║             ║
-   ║   unicorn   ║
+   ║   better    ║
    ║             ║
    ╚═════════════╝
 
 */
 
-console.log(boxen('unicorns love rainbows', { title: 'magical', titleAlignment: 'center' }));
+console.log(boxen('better is preferable', { title: 'magical', titleAlignment: 'center' }));
 /*
-┌────── magical ───────┐
-│unicorns love rainbows│
-└──────────────────────┘
+┌───── magical ──────┐
+│better is preferable│
+└────────────────────┘
 */
 ```
 

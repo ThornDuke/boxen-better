@@ -1,8 +1,8 @@
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('fullscreen option', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     fullscreen: true,
   });
 
@@ -10,7 +10,7 @@ test('fullscreen option', t => {
 });
 
 test('fullscreen option + width', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     fullscreen: true,
     width: 10,
   });
@@ -19,7 +19,7 @@ test('fullscreen option + width', t => {
 });
 
 test('fullscreen option + height', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     fullscreen: true,
     height: 10,
   });
@@ -28,7 +28,7 @@ test('fullscreen option + height', t => {
 });
 
 test('fullscreen option with callback', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     fullscreen: (width, height) => [width - 2, height - 2],
   });
 

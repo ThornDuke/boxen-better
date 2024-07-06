@@ -1,8 +1,8 @@
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('border color (red)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderColor: 'red',
   });
 
@@ -10,7 +10,7 @@ test('border color (red)', t => {
 });
 
 test('border color (blue)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderColor: 'blue',
   });
 
@@ -18,7 +18,7 @@ test('border color (blue)', t => {
 });
 
 test('border color (green)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderColor: 'green',
   });
 
@@ -26,7 +26,7 @@ test('border color (green)', t => {
 });
 
 test('border color (yellow + dim)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderColor: 'green',
     dimBorder: true,
   });
@@ -35,7 +35,7 @@ test('border color (yellow + dim)', t => {
 });
 
 test('border color (hex)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderColor: '#FF00FF',
     dimBorder: true,
   });
@@ -45,12 +45,12 @@ test('border color (hex)', t => {
 
 test('throws on unexpected borderColor', t => {
   t.throws(() => {
-    boxen('foo', { borderColor: 'greasy-white' });
+    boxenb('foo', { borderColor: 'greasy-white' });
   });
 });
 
 test('border style (single)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'single',
   });
 
@@ -58,7 +58,7 @@ test('border style (single)', t => {
 });
 
 test('border style (singleDouble)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'singleDouble',
   });
 
@@ -66,7 +66,7 @@ test('border style (singleDouble)', t => {
 });
 
 test('border style (doubleSingle)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'doubleSingle',
   });
 
@@ -74,7 +74,7 @@ test('border style (doubleSingle)', t => {
 });
 
 test('border style (double)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'double',
   });
 
@@ -82,7 +82,7 @@ test('border style (double)', t => {
 });
 
 test('border style (classic)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'classic',
   });
 
@@ -90,7 +90,7 @@ test('border style (classic)', t => {
 });
 
 test('border style (bold)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'bold',
   });
 
@@ -98,7 +98,7 @@ test('border style (bold)', t => {
 });
 
 test('border style (round)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'round',
   });
 
@@ -106,7 +106,7 @@ test('border style (round)', t => {
 });
 
 test('border style (none)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: 'none',
   });
 
@@ -114,7 +114,7 @@ test('border style (none)', t => {
 });
 
 test('border style (custom ascii style)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     borderStyle: {
       topLeft: '1',
       topRight: '2',
@@ -132,13 +132,13 @@ test('border style (custom ascii style)', t => {
 
 test('throws on unexpected borderStyle as string', t => {
   t.throws(() => {
-    boxen('foo', { borderStyle: 'shakenSnake' });
+    boxenb('foo', { borderStyle: 'shakenSnake' });
   });
 });
 
 test('throws on unexpected borderStyle as object', t => {
   t.throws(() => {
-    boxen('foo', { borderStyle: { shake: 'snake' } });
+    boxenb('foo', { borderStyle: { shake: 'snake' } });
   });
 
   // Missing bottomRight
@@ -151,6 +151,6 @@ test('throws on unexpected borderStyle as object', t => {
   };
 
   t.throws(() => {
-    boxen('foo', { borderStyle: invalid });
+    boxenb('foo', { borderStyle: invalid });
   });
 });

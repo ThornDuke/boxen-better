@@ -1,5 +1,5 @@
 import { expectType } from 'tsd';
-import boxen, { type Spacing, type CustomBorderStyle } from './index.js';
+import boxenb, { type Spacing, type CustomBorderStyle } from './index.js';
 
 const border: CustomBorderStyle = {
   topLeft: ' ',
@@ -19,22 +19,22 @@ const spacing: Spacing = {
   left: 0,
 };
 
-expectType<string>(boxen('unicorns'));
-expectType<string>(boxen('unicorns', { title: 'title' }));
-expectType<string>(boxen('unicorns', { title: 'title', titleAlignment: 'center' }));
-expectType<string>(boxen('unicorns', { borderColor: 'green' }));
-expectType<string>(boxen('unicorns', { borderColor: '#ff0000' }));
-expectType<string>(boxen('unicorns', { borderStyle: 'double' }));
-expectType<string>(boxen('unicorns', { borderStyle: border }));
-expectType<string>(boxen('unicorns', { dimBorder: true }));
-expectType<string>(boxen('unicorns', { padding: 3 }));
-expectType<string>(boxen('unicorns', { padding: spacing }));
-expectType<string>(boxen('unicorns', { margin: 3 }));
-expectType<string>(boxen('unicorns', { margin: spacing }));
-expectType<string>(boxen('unicorns', { float: 'center' }));
-expectType<string>(boxen('unicorns', { backgroundColor: 'green' }));
-expectType<string>(boxen('unicorns', { backgroundColor: '#ff0000' }));
-expectType<string>(boxen('unicorns', { textAlignment: 'right' }));
-expectType<string>(boxen('unicorns', { width: 20 }));
-expectType<string>(boxen('unicorns', { height: 5 }));
-expectType<string>(boxen('unicorns', { fullscreen: true }));
+expectType<string>(boxenb('better'));
+expectType<string>(boxenb('better', { title: 'title' }));
+expectType<string>(boxenb('better', { title: 'title', titleAlignment: 'center' }));
+expectType<string>(boxenb('better', { borderColor: 'green' }));
+expectType<string>(boxenb('better', { borderColor: '#ff0000' }));
+expectType<string>(boxenb('better', { borderStyle: 'double' }));
+expectType<string>(boxenb('better', { borderStyle: border }));
+expectType<string>(boxenb('better', { dimBorder: true }));
+expectType<string>(boxenb('better', { padding: 3 }));
+expectType<string>(boxenb('better', { padding: spacing }));
+expectType<string>(boxenb('better', { margin: 3 }));
+expectType<string>(boxenb('better', { margin: spacing }));
+expectType<string>(boxenb('better', { float: 'center' }));
+expectType<string>(boxenb('better', { backgroundColor: 'green' }));
+expectType<string>(boxenb('better', { backgroundColor: '#ff0000' }));
+expectType<string>(boxenb('better', { textAlignment: 'right' }));
+expectType<string>(boxenb('better', { width: 20 }));
+expectType<string>(boxenb('better', { height: 5 }));
+expectType<string>(boxenb('better', { fullscreen: true }));

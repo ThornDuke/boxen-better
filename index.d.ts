@@ -156,7 +156,7 @@ export type Options = {
 
 	@example
 	```
-	console.log(boxen('foo bar', {title: 'example'}));
+	console.log(boxenb('foo bar', {title: 'example'}));
 	// ┌ example ┐
 	// │foo bar  │
 	// └─────────┘
@@ -171,12 +171,12 @@ export type Options = {
 
 	@example
 	```
-	console.log(boxen('foo bar foo bar', {title: 'example', titleAlignment: 'center'}));
+	console.log(boxenb('foo bar foo bar', {title: 'example', titleAlignment: 'center'}));
 	// ┌─── example ───┐
 	// │foo bar foo bar│
 	// └───────────────┘
 
-	console.log(boxen('foo bar foo bar', {title: 'example', titleAlignment: 'right'}));
+	console.log(boxenb('foo bar foo bar', {title: 'example', titleAlignment: 'right'}));
 	// ┌────── example ┐
 	// │foo bar foo bar│
 	// └───────────────┘
@@ -191,9 +191,9 @@ export type Options = {
 
 	@example
 	```
-	import boxen from 'boxen';
+	import boxenb from 'boxen-better';
 
-	console.log(boxen('foo bar', {width: 15}));
+	console.log(boxenb('foo bar', {width: 15}));
 	// ┌─────────────┐
 	// │foo bar      │
 	// └─────────────┘
@@ -208,9 +208,9 @@ export type Options = {
 
 	@example
 	```
-	import boxen from 'boxen';
+	import boxenb from 'boxen-better';
 
-	console.log(boxen('foo bar', {height: 5}));
+	console.log(boxenb('foo bar', {height: 5}));
 	// ┌───────┐
 	// │foo bar│
 	// │       │
@@ -227,9 +227,9 @@ export type Options = {
 
 	@example
 	```
-	import boxen from 'boxen';
+	import boxenb from 'boxen-better';
 
-	console.log(boxen('foo bar', {
+	console.log(boxenb('foo bar', {
 		fullscreen: (width, height) => [width, height - 1],
 	}));
 	```
@@ -247,23 +247,23 @@ Creates a box in the terminal.
 
 @example
 ```
-import boxen from 'boxen';
+import boxenb from 'boxen-better';
 
-console.log(boxen('unicorn', {padding: 1}));
+console.log(boxenb('better', {padding: 1}));
 // ┌─────────────┐
 // │             │
-// │   unicorn   │
+// │   better    │
 // │             │
 // └─────────────┘
 
-console.log(boxen('unicorn', {padding: 1, margin: 1, borderStyle: 'double'}));
+console.log(boxenb('better', {padding: 1, margin: 1, borderStyle: 'double'}));
 //
 // ╔═════════════╗
 // ║             ║
-// ║   unicorn   ║
+// ║   better    ║
 // ║             ║
 // ╚═════════════╝
 //
 ```
 */
-export default function boxen(text: string, options?: Options): string;
+export default function boxenb(text: string, options?: Options): string;

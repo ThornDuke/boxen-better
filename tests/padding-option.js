@@ -1,8 +1,8 @@
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('padding option works', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     padding: 2,
   });
 
@@ -10,7 +10,7 @@ test('padding option works', t => {
 });
 
 test('padding option advanced', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     padding: {
       top: 0,
       bottom: 2,
@@ -23,7 +23,7 @@ test('padding option advanced', t => {
 });
 
 test('padding option with border style (none)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     padding: {
       top: 1,
       bottom: 1,

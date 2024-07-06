@@ -1,8 +1,8 @@
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('title option works', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     title: 'title',
   });
 
@@ -10,7 +10,7 @@ test('title option works', t => {
 });
 
 test('title align left', t => {
-  const box = boxen('foo bar foo bar', {
+  const box = boxenb('foo bar foo bar', {
     title: 'title',
     titleAlignment: 'left',
   });
@@ -19,7 +19,7 @@ test('title align left', t => {
 });
 
 test('title align center', t => {
-  const box = boxen('foo bar foo bar', {
+  const box = boxenb('foo bar foo bar', {
     title: 'title',
     titleAlignment: 'center',
   });
@@ -28,7 +28,7 @@ test('title align center', t => {
 });
 
 test('title align right', t => {
-  const box = boxen('foo bar foo bar', {
+  const box = boxenb('foo bar foo bar', {
     title: 'title',
     titleAlignment: 'right',
   });
@@ -37,7 +37,7 @@ test('title align right', t => {
 });
 
 test('long title expands box', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     title: 'very long title',
   });
 
@@ -47,7 +47,7 @@ test('long title expands box', t => {
 test('title + width option', t => {
   // Not enough space, no title
   t.snapshot(
-    boxen('foo', {
+    boxenb('foo', {
       title: 'very long title',
       width: 3,
     })
@@ -55,14 +55,14 @@ test('title + width option', t => {
 
   // Space for only one character
   t.snapshot(
-    boxen('foo', {
+    boxenb('foo', {
       title: 'very long title',
       width: 5,
     })
   );
 
   t.snapshot(
-    boxen('foo', {
+    boxenb('foo', {
       title: 'very long title',
       width: 20,
     })
@@ -70,7 +70,7 @@ test('title + width option', t => {
 });
 
 test('title option with border style (none)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     title: 'title',
     borderStyle: 'none',
   });

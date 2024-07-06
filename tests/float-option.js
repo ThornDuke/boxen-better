@@ -1,9 +1,9 @@
 import process from 'node:process';
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('float option (left)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     float: 'left',
   });
 
@@ -11,7 +11,7 @@ test('float option (left)', t => {
 });
 
 test('float option (center)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     float: 'center',
   });
 
@@ -19,7 +19,7 @@ test('float option (center)', t => {
 });
 
 test('float option (right)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     float: 'right',
   });
 
@@ -27,7 +27,7 @@ test('float option (right)', t => {
 });
 
 test('float option (center) with margin', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     float: 'right',
     margin: {
       left: 3,
@@ -39,7 +39,7 @@ test('float option (center) with margin', t => {
 });
 
 test('float option (right) with margin', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     float: 'right',
     margin: {
       right: 2,
@@ -54,12 +54,12 @@ test('float option (center) when content > columns', t => {
   const longContent = 'foobar'.repeat(process.env.COLUMNS);
 
   t.notThrows(() => {
-    boxen(longContent, {
+    boxenb(longContent, {
       float: 'center',
     });
   });
 
-  const box = boxen(longContent, {
+  const box = boxenb(longContent, {
     float: 'center',
   });
 
@@ -70,12 +70,12 @@ test('float option (right) when content > columns', t => {
   const longContent = 'foobar'.repeat(process.env.COLUMNS);
 
   t.notThrows(() => {
-    boxen(longContent, {
+    boxenb(longContent, {
       float: 'right',
     });
   });
 
-  const box = boxen(longContent, {
+  const box = boxenb(longContent, {
     float: 'right',
   });
 

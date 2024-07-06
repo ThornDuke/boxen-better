@@ -389,7 +389,7 @@ const isColorValid = color => typeof color === 'string' && (chalk[color] ?? isHe
 const getColorFn = color => (isHex(color) ? chalk.hex(color) : chalk[color]);
 const getBGColorFn = color => (isHex(color) ? chalk.bgHex(color) : chalk[camelCase(['bg', color])]);
 
-export default function boxen(text, options) {
+export default function boxenb(text, options) {
   options = {
     padding: 0,
     borderStyle: 'single',

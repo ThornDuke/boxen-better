@@ -4,7 +4,7 @@ import boxenb from './index.js';
 
 console.log(
   '\n\n' +
-    boxenb(chalk.cyan('unicorn'), {
+    boxenb(chalk.cyan('better'), {
       padding: 1,
       margin: 1,
       borderColor: 'yellow',
@@ -14,7 +14,7 @@ console.log(
 
 console.log(
   '\n\n' +
-    boxenb(chalk.cyan('unicorn'), {
+    boxenb(chalk.cyan('better'), {
       padding: 1,
       margin: 1,
       borderColor: 'yellow',
@@ -25,7 +25,7 @@ console.log(
 
 console.log(
   '\n\n' +
-    boxenb(chalk.cyan('unicorn'), {
+    boxenb(chalk.cyan('better'), {
       padding: 1,
       margin: 1,
       borderColor: '#eebbaa',
@@ -36,7 +36,7 @@ console.log(
 
 console.log(
   '\n\n' +
-    boxenb(chalk.black('unicorn'), {
+    boxenb(chalk.black('better'), {
       padding: 1,
       margin: 1,
       borderColor: '#ffc0cb',
@@ -48,12 +48,12 @@ console.log(
 
 console.log(
   '\n\n' +
-    boxenb(chalk.black('unicorn'), {
+    boxenb(chalk.black('better'), {
       padding: 1,
       margin: 1,
-      borderColor: '#ffc0cb',
-      backgroundColor: '#00ffff',
-      borderBackgroundColor: '#00ffff',
+      borderColor: 'red',
+      backgroundColor: 'green',
+      borderBackgroundColor: 'green',
       borderStyle: 'double',
     }) +
     '\n'
@@ -61,10 +61,32 @@ console.log(
 
 console.log(
   '\n\n' +
-    boxenb(chalk.black('unicorn'), {
+    boxenb(chalk.black('better'), {
       padding: 1,
       margin: 1,
       borderColor: 'yellow',
+      backgroundColor: 'magenta',
+      borderStyle: {
+        topLeft: '+',
+        topRight: '+',
+        bottomLeft: '+',
+        bottomRight: '+',
+        top: '-',
+        bottom: '-',
+        left: '|',
+        right: '|',
+      },
+    }) +
+    '\n'
+);
+
+console.log(
+  '\n\n' +
+    boxenb(chalk.black('better'), {
+      padding: 1,
+      margin: 1,
+      borderColor: 'blue',
+      borderBackgroundColor: 'magenta',
       backgroundColor: 'magenta',
       borderStyle: {
         topLeft: '+',
@@ -126,6 +148,8 @@ console.log(
 
 console.log(
   '\n\n' +
-    boxenb('And this one is in half-width and full-height !', { fullscreen: (w, h) => [w / 2, h] }) +
+    boxenb('And this one is in half-width and full-height !', {
+      fullscreen: (w, h) => [w / 2, h],
+    }) +
     '\n'
 );

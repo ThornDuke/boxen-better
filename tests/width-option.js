@@ -1,17 +1,17 @@
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('width option works', t => {
   // Creates a wide box for little text
   t.snapshot(
-    boxen('foo', {
+    boxenb('foo', {
       width: 20,
     })
   );
 
   // Creates a small box for a lot of text
   t.snapshot(
-    boxen('foo bar foo bar', {
+    boxenb('foo bar foo bar', {
       width: 10,
     })
   );
@@ -19,7 +19,7 @@ test('width option works', t => {
 
 test('width option with padding + margin', t => {
   // Creates a wide box for little text
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     width: 20,
     margin: 2,
     padding: 1,
@@ -30,7 +30,7 @@ test('width option with padding + margin', t => {
 
 test('width option with big padding', t => {
   // Should disable the paddings
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     width: 6,
     padding: 3,
   });
@@ -39,7 +39,7 @@ test('width option with big padding', t => {
 });
 
 test('width option with border style (none)', t => {
-  const box = boxen('foo', {
+  const box = boxenb('foo', {
     width: 3,
     borderStyle: 'none',
   });

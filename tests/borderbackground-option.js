@@ -1,20 +1,20 @@
 import test from 'ava';
-import boxen from '../index.js';
+import boxenb from '../index.js';
 
 test('borderBackgroundColor option', t => {
-  const box = boxen('foo', { borderBackgroundColor: 'yellow' });
+  const box = boxenb('foo', { borderBackgroundColor: 'yellow' });
 
   t.snapshot(box);
 });
 
 test('borderBackgroundColor hex', t => {
-  const box = boxen('foo', { borderBackgroundColor: '#FFFF00' });
+  const box = boxenb('foo', { borderBackgroundColor: '#FFFF00' });
 
   t.snapshot(box);
 });
 
 test('throws on unexpected borderBackgroundColor', t => {
   t.throws(() => {
-    boxen('foo', { borderBackgroundColor: 'dark-yellow' });
+    boxenb('foo', { borderBackgroundColor: 'dark-yellow' });
   });
 });
