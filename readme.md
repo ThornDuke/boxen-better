@@ -10,13 +10,13 @@ identical in terms of functionality, but it has an additional option:
 
 ## Install
 
-```sh
+```bash
 npm install boxen-better
 ```
 
 ## Usage
 
-```js
+```javascript
 import boxenb from 'boxen-better';
 
 console.log(boxenb('better', { padding: 1 }));
@@ -149,7 +149,7 @@ Style of the box border.
 
 Can be any of the above predefined styles or an object with the following keys:
 
-```js
+```javascript
 {
 	topLeft: '+',
 	topRight: '+',
@@ -185,7 +185,7 @@ Display a title at the top of the box. If needed, the box will horizontally expa
 
 Example:
 
-```js
+```javascript
 console.log(boxenb('foo bar', { title: 'example' }));
 /*
 ┌ example ┐
@@ -205,7 +205,7 @@ Values:
 
 - `'left'`
 
-```js
+```javascript
 /*
 ┌ example ──────┐
 │foo bar foo bar│
@@ -215,7 +215,7 @@ Values:
 
 - `'center'`
 
-```js
+```javascript
 /*
 ┌─── example ───┐
 │foo bar foo bar│
@@ -225,7 +225,7 @@ Values:
 
 - `'right'`
 
-```js
+```javascript
 /*
 ┌────── example ┐
 │foo bar foo bar│
@@ -242,7 +242,7 @@ Set a fixed width for the box.
 _Note:_ This disables terminal overflow handling and may cause the box to look broken if the user's
 terminal is not wide enough.
 
-```js
+```javascript
 import boxenb from 'boxen-better';
 
 console.log(boxenb('foo bar', { width: 15 }));
@@ -259,7 +259,7 @@ Set a fixed height for the box.
 
 _Note:_ This option will crop overflowing content.
 
-```js
+```javascript
 import boxenb from 'boxen-better';
 
 console.log(boxenb('foo bar', { height: 5 }));
@@ -278,7 +278,7 @@ Whether or not to fit all available space within the terminal.
 
 Pass a callback function to control box dimensions:
 
-```js
+```javascript
 import boxenb from 'boxen-better';
 
 console.log(
