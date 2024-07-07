@@ -1,6 +1,5 @@
 node_modules
 yarn.lock
-.nyc_output
 package-lock.json
 project-notes.md
-.DS_Store
+
