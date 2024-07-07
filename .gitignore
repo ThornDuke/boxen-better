@@ -3,3 +3,5 @@ yarn.lock
 package-lock.json
 project-notes.md
 
+# npm packages
+*.tgz
