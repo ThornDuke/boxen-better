@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [Unreleased]
+## [1.1.2] - 2024-07-11
 
 - <readme.md>: Added some content and two more images
 - <package.json>: a better organization
