@@ -45,13 +45,13 @@
     "camelcase": "^7.0.1",
     "chalk": "^5.2.0",
     "cli-boxes": "^3.0.0",
-    "prettier": "^3.3.2",
     "string-width": "^5.1.2",
     "type-fest": "^2.13.0",
     "widest-line": "^4.0.1",
     "wrap-ansi": "^8.1.0"
   },
   "devDependencies": {
+    "prettier": "^3.3.2",
     "ava": "^5.2.0",
     "nyc": "^15.1.0",
     "tsd": "^0.28.1"

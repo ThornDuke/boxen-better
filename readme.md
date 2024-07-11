@@ -2,11 +2,20 @@
 
 > Create wonderful boxes in the terminal
 
-![](screenshot.png)
+![screernshot](./images/screenshot.png)
 
 This library is a fork of [`Boxen`](https://www.npmjs.com/package/boxen) by Sindre Sorhus. It's
 identical in terms of functionality, but it has an additional option:
 [`borderBackgroundColor`](#borderbackgroundcolor).
+
+If you don't need to manage the background color of the border, then continue using `boxen`. If,
+however, you feel you need more elegance for your boxes then update your project using
+`boxen-better`.
+
+<div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+<img src="./images/frame1.jpeg" width="300" alt="Example of a border without background color management">
+<img src="./images/frame2.jpeg" width="300" alt="Example of a border with an effective background color management">
+</div>
 
 ## Install
 
@@ -77,7 +86,7 @@ Values:
 
 - `'single'`
 
-```
+```text
 ┌───┐
 │foo│
 └───┘
@@ -85,7 +94,7 @@ Values:
 
 - `'double'`
 
-```
+```text
 ╔═══╗
 ║foo║
 ╚═══╝
@@ -93,7 +102,7 @@ Values:
 
 - `'round'` (`'single'` sides with round corners)
 
-```
+```text
 ╭───╮
 │foo│
 ╰───╯
@@ -101,7 +110,7 @@ Values:
 
 - `'bold'`
 
-```
+```text
 ┏━━━┓
 ┃foo┃
 ┗━━━┛
@@ -109,7 +118,7 @@ Values:
 
 - `'singleDouble'` (`'single'` on top and bottom, `'double'` on right and left)
 
-```
+```text
 ╓───╖
 ║foo║
 ╙───╜
@@ -117,7 +126,7 @@ Values:
 
 - `'doubleSingle'` (`'double'` on top and bottom, `'single'` on right and left)
 
-```
+```text
 ╒═══╕
 │foo│
 ╘═══╛
@@ -125,7 +134,7 @@ Values:
 
 - `'classic'`
 
-```
+```text
 +---+
 |foo|
 +---+
@@ -133,7 +142,7 @@ Values:
 
 - `'arrow'`
 
-```
+```text
 ↘↓↓↓↙
 →foo←
 ↗↑↑↑↖
@@ -141,7 +150,7 @@ Values:
 
 - `'none'`
 
-```
+```text
 foo
 ```
 
@@ -151,14 +160,14 @@ Can be any of the above predefined styles or an object with the following keys:
 
 ```javascript
 {
-	topLeft: '+',
-	topRight: '+',
-	bottomLeft: '+',
-	bottomRight: '+',
-	top: '-',
-	bottom: '-',
-	left: '|',
-	right: '|'
+  topLeft: '+',
+  topRight: '+',
+  bottomLeft: '+',
+  bottomRight: '+',
+  top: '-',
+  bottom: '-',
+  left: '|',
+  right: '|'
 }
 ```
 
