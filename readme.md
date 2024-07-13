@@ -4,9 +4,8 @@
 
 ![screernshot](./images/screenshot.png)
 
-This library is a fork of [`Boxen`](https://www.npmjs.com/package/boxen) by Sindre Sorhus. It's
-identical in terms of functionality, but it has an additional option:
-[`borderBackgroundColor`](#borderbackgroundcolor).
+This library is a fork of [`Boxen`](https://www.npmjs.com/package/boxen). It's identical in terms of
+functionality, but it has an additional option: [`borderBackgroundColor`](#borderbackgroundcolor).
 
 If you don't need to manage the background color of the border, then continue using `boxen`. If,
 however, you feel you need more elegance for your boxes then update your project using
@@ -14,7 +13,7 @@ however, you feel you need more elegance for your boxes then update your project
 
 <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
 <img src="./images/frame1.jpeg" width="300" alt="Example of a border without background color management">
-<img src="./images/frame2.jpeg" width="300" alt="Example of a border with an effective background color management">
+<img src="./images/frame3.jpeg" width="300" alt="Example of a border with an effective background color management">
 </div>
 
 ## Install

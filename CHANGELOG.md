@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [Unreleased]
+
+- <readme.md>: some typos
+- <readme.md>: better images
+
 ## [1.1.2] - 2024-07-11
 
 - <readme.md>: Added some content and two more images
