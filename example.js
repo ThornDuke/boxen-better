@@ -153,18 +153,3 @@ console.log(
     }) +
     '\n'
 );
-
-console.log('==========================================');
-
-console.log(
-  '\n\n' +
-    boxenb(chalk.black(`Now Is Much ${chalk.bold.blue('Better!')}`), {
-      padding: 1,
-      margin: 1,
-      borderColor: 'black',
-      backgroundColor: '#e8e8e8',
-      borderBackgroundColor: '#e8e8e8',
-      borderStyle: 'round',
-    }) +
-    '\n'
-);

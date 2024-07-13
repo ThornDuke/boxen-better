@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## [Unreleased]
+## [1.1.3] - 2024-07-13
 
 - <readme.md>: some typos
 - <readme.md>: better images
